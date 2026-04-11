@@ -1,0 +1,12 @@
+.dashboard {
+  min-height: 100vh;
+  display: flex;
+  background: linear-gradient(100deg, #1f1a4b, #2e2a72, #0f8aa8);
+  color: white;
+}
+
+.mainContent {
+  flex: 1;
+  padding: 20px;
+  overflow-x: hidden;
+}
