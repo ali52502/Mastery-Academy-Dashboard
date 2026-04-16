@@ -1,0 +1,26 @@
+.page {
+  width: 100%;
+}
+
+.pageHeader {
+  margin-bottom: 18px;
+}
+
+.title {
+  font-size: 28px;
+  font-weight: 800;
+  margin-bottom: 6px;
+  color: white;
+}
+
+.subtitle {
+  font-size: 14px;
+  color: #d1d5db;
+}
+
+.bottomStack {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  margin-top: 18px;
+}

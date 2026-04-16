@@ -102,3 +102,49 @@
   font-weight: 600;
   box-shadow: 0 8px 18px rgba(6, 182, 212, 0.18);
 }
+
+@media (max-width: 1024px) {
+  .sidebar {
+    width: 100%;
+    min-height: auto;
+    padding: 16px;
+    border-right: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  }
+
+  .logoSection {
+    margin-bottom: 18px;
+  }
+
+  .adminSection {
+    margin-bottom: 18px;
+  }
+
+  .navList {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .navItem {
+    flex: 1 1 170px;
+  }
+}
+
+@media (max-width: 640px) {
+  .sidebar {
+    padding: 14px;
+  }
+
+  .logo {
+    font-size: 18px;
+  }
+
+  .adminSection {
+    gap: 10px;
+  }
+
+  .navItem {
+    flex-basis: 100%;
+    padding: 11px 12px;
+  }
+}

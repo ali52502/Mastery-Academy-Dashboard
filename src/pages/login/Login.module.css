@@ -91,3 +91,23 @@
   font-size: 14px;
   margin-top: -6px;
 }
+
+@media (max-width: 640px) {
+  .loginPage {
+    padding: 14px;
+  }
+
+  .loginCard {
+    padding: 22px 18px;
+    border-radius: 18px;
+  }
+
+  .title {
+    font-size: 26px;
+  }
+
+  .subtitle {
+    margin-bottom: 22px;
+    font-size: 14px;
+  }
+}

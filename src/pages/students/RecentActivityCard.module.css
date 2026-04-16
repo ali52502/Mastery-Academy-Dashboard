@@ -52,3 +52,15 @@
   color: #cbd5e1;
   line-height: 1.5;
 }
+
+@media (max-width: 640px) {
+  .card {
+    margin-top: 14px;
+    padding: 16px;
+    border-radius: 18px;
+  }
+
+  .item {
+    padding: 12px;
+  }
+}

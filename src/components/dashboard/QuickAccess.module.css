@@ -43,3 +43,24 @@
   transform: translateY(-2px);
   opacity: 0.95;
 }
+
+@media (max-width: 640px) {
+  .card {
+    padding: 16px;
+    border-radius: 18px;
+  }
+
+  .title {
+    font-size: 20px;
+    margin-bottom: 16px;
+  }
+
+  .actions {
+    gap: 10px;
+  }
+
+  .actionButton {
+    padding: 12px 14px;
+    border-radius: 12px;
+  }
+}

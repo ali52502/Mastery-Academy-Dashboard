@@ -1,0 +1,39 @@
+.cardsSection {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding: 40px 20px 60px;
+  background: #111827;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 18px;
+  padding: 24px;
+  color: white;
+  transition: 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(6, 182, 212, 0.5);
+}
+
+.card h3 {
+  font-size: 22px;
+  margin-bottom: 12px;
+}
+
+.card p {
+  font-size: 15px;
+  line-height: 1.7;
+  color: #d1d5db;
+}
+
+@media (max-width: 900px) {
+  .cardsSection {
+    grid-template-columns: 1fr;
+  }
+}

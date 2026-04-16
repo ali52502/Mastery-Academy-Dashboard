@@ -64,3 +64,27 @@
   font-weight: 700;
   box-shadow: 0 10px 20px rgba(6, 182, 212, 0.18);
 }
+
+@media (max-width: 640px) {
+  .eventsCard {
+    min-height: auto;
+    padding: 16px;
+    border-radius: 18px;
+  }
+
+  .title {
+    font-size: 20px;
+    margin-bottom: 16px;
+  }
+
+  .daysRow,
+  .datesGrid {
+    gap: 6px;
+  }
+
+  .dateItem {
+    height: 32px;
+    border-radius: 10px;
+    font-size: 12px;
+  }
+}

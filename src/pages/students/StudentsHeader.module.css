@@ -13,3 +13,17 @@
   font-size: 14px;
   color: #d1d5db;
 }
+
+@media (max-width: 640px) {
+  .pageHeader {
+    margin-bottom: 14px;
+  }
+
+  .title {
+    font-size: 24px;
+  }
+
+  .subtitle {
+    line-height: 1.5;
+  }
+}

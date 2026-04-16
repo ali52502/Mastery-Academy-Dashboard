@@ -60,3 +60,16 @@
   color: white;
   font-size: 14px;
 }
+
+@media (max-width: 640px) {
+  .card {
+    padding: 16px;
+    border-radius: 18px;
+  }
+
+  .item {
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 12px 14px;
+  }
+}

@@ -102,3 +102,35 @@
   font-size: 12px;
   padding-top: 6px;
 }
+
+@media (max-width: 640px) {
+  .card {
+    padding: 16px;
+    border-radius: 18px;
+  }
+
+  .header {
+    gap: 10px;
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .chart {
+    gap: 10px;
+    height: 210px;
+  }
+
+  .yAxis {
+    width: 28px;
+    font-size: 11px;
+  }
+
+  .svg {
+    height: 155px;
+  }
+
+  .xAxis {
+    font-size: 11px;
+    gap: 8px;
+  }
+}

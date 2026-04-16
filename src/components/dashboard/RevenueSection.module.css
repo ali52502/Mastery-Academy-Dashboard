@@ -100,3 +100,36 @@
   color: #d1d5db;
   font-size: 13px;
 }
+
+@media (max-width: 640px) {
+  .revenueCard {
+    min-height: auto;
+    padding: 16px;
+    border-radius: 18px;
+  }
+
+  .header {
+    gap: 10px;
+    align-items: flex-start;
+    flex-direction: column;
+    margin-bottom: 18px;
+  }
+
+  .title {
+    font-size: 20px;
+  }
+
+  .chartArea {
+    gap: 10px;
+    height: 220px;
+  }
+
+  .yAxis {
+    width: 28px;
+    font-size: 11px;
+  }
+
+  .xAxis {
+    font-size: 11px;
+  }
+}

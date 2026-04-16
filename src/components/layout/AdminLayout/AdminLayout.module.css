@@ -3,10 +3,28 @@
   display: flex;
   background: linear-gradient(100deg, #1f1a4b, #2e2a72, #0f8aa8);
   color: white;
+  width: 100%;
 }
 
 .mainContent {
   flex: 1;
+  min-width: 0;
   padding: 20px;
   overflow-x: hidden;
+}
+
+@media (max-width: 1024px) {
+  .dashboard {
+    flex-direction: column;
+  }
+
+  .mainContent {
+    padding: 18px;
+  }
+}
+
+@media (max-width: 640px) {
+  .mainContent {
+    padding: 14px;
+  }
 }
