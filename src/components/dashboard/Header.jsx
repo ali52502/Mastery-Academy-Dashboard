@@ -1,7 +1,23 @@
-import { IoNotificationsOutline, IoSettingsOutline, IoSearchOutline } from "react-icons/io5";
+import {
+  IoNotificationsOutline,
+  IoSettingsOutline,
+  IoSearchOutline,
+  IoLogOutOutline,
+} from "react-icons/io5";
+import { useNavigate } from "react-router-dom";
 import styles from "./Header.module.css";
 
 const Header = () => {
+  const navigate = useNavigate();
+
+  const handleLogout = () => {
+    // NOTE: مسح بيانات الدخول
+    sessionStorage.removeItem("auth_user");
+
+    // NOTE: رجوع لصفحة login
+    navigate("/login");
+  };
+
   return (
     <header className={styles.header}>
       <div className={styles.welcomeBox}>
@@ -17,12 +33,15 @@ const Header = () => {
           <input type="text" placeholder="Search..." />
         </div>
 
-        <button className={styles.iconButton}>
-          <IoNotificationsOutline />
-        </button>
 
-        <button className={styles.iconButton}>
-          <IoSettingsOutline />
+        {/* NOTE: زر Logout */}
+        <button
+          className={styles.iconButton}
+          type="button"
+          title="Logout"
+          onClick={handleLogout}
+        >
+          <IoLogOutOutline />
         </button>
 
         <div className={styles.profileCard}>

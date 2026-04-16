@@ -5,18 +5,46 @@ import styles from "./Login.module.css";
 const Login = () => {
   const navigate = useNavigate();
 
+  const alreadyLoggedIn = sessionStorage.getItem("auth_user");
+  if (alreadyLoggedIn) {
+    navigate("/dashboard");
+  }
+
+  // NOTE: states للـ inputs
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+
+  // NOTE: state لرسالة الخطأ
   const [error, setError] = useState("");
+
+  // NOTE: بيانات الأدمن (مؤقتة)
+  const ADMIN_EMAIL = "admin@mastery.com";
+  const ADMIN_PASSWORD = "123456";
 
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    const adminEmail = "admin@mastery.com";
-    const adminPassword = "123456";
+    // NOTE: validation بسيط (اختياري)
+    if (!email || !password) {
+      setError("Please enter email and password");
+      return;
+    }
 
-    if (email === adminEmail && password === adminPassword) {
+    // NOTE: check email/password
+    if (email === ADMIN_EMAIL && password === ADMIN_PASSWORD) {
       setError("");
+
+      // NOTE: بنعمل object لبيانات المستخدم اللي هنخزنها في sessionStorage
+      const userData = {
+        name: "Ali Hamada",
+        role: "ADMIN",
+        email: ADMIN_EMAIL,
+      };
+
+      // NOTE: sessionStorage بيخزن string فقط => لازم JSON.stringify
+      sessionStorage.setItem("auth_user", JSON.stringify(userData));
+
+      // NOTE: بعد ما نخزن => نروح للداشبورد
       navigate("/dashboard");
     } else {
       setError("Invalid email or password");
@@ -36,7 +64,7 @@ const Login = () => {
             <label>Email</label>
             <input
               type="email"
-              placeholder="Enter your email"
+              placeholder="admin@mastery.com"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
             />
@@ -46,12 +74,13 @@ const Login = () => {
             <label>Password</label>
             <input
               type="password"
-              placeholder="Enter your password"
+              placeholder="123456"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
             />
           </div>
 
+          {/* NOTE: لو فيه خطأ يظهر هنا */}
           {error && <p className={styles.error}>{error}</p>}
 
           <button type="submit" className={styles.loginButton}>
