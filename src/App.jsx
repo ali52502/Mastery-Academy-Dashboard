@@ -6,7 +6,7 @@ import AdminLayout from "./components/layout/AdminLayout/AdminLayout";
 import Dashboard from "./components/dashboard/Dashboard";
 import Students from "./pages/students/Students";
 import Teachers from "./pages/teachers/Teachers";
-import Statistics from "./pages/statistics/Statistics";
+// import Statistics from "./pages/statistics/Statistics";
 
 function App() {
   return (
@@ -19,7 +19,7 @@ function App() {
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/students" element={<Students />} />
         <Route path="/teachers" element={<Teachers />} />
-        <Route path="/statistics" element={<Statistics />} />
+        {/* <Route path="/statistics" element={<Statistics />} /> */}
       </Route>
     </Routes>
   );

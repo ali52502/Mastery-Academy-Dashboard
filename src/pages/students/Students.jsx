@@ -2,8 +2,8 @@ import StudentsHeader from "./StudentsHeader";
 import StudentsStats from "./StudentsStats";
 import StudentsTable from "./StudentsTable";
 import styles from "./Students.module.css";
-import RecentActivityCard from "./RecentActivityCard";
-import EnrollmentTrendCard from "./EnrollmentTrendCard";
+// import RecentActivityCard from "./RecentActivityCard";
+// import EnrollmentTrendCard from "./EnrollmentTrendCard";
 
 const Students = () => {
   return (
@@ -11,8 +11,8 @@ const Students = () => {
       <StudentsHeader />
       <StudentsStats />
       <StudentsTable />
-      <RecentActivityCard />
-      <EnrollmentTrendCard />
+      {/* <RecentActivityCard /> */}
+      {/* <EnrollmentTrendCard /> */}
     </div>
   );
 };

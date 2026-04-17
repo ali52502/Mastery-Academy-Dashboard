@@ -42,10 +42,10 @@ const Sidebar = () => {
 
 
 
-          <NavLink to="/statistics" className={linkClass}>
+          {/* <NavLink to="/statistics" className={linkClass}>
             <FaChartBar className={styles.icon} />
             <span>Statistics</span>
-          </NavLink>
+          </NavLink> */}
         </nav>
       </div>
     </aside>

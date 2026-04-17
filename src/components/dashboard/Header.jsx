@@ -28,10 +28,7 @@ const Header = () => {
       </div>
 
       <div className={styles.rightSection}>
-        <div className={styles.searchBox}>
-          <IoSearchOutline className={styles.searchIcon} />
-          <input type="text" placeholder="Search..." />
-        </div>
+
 
 
         {/* NOTE: زر Logout */}
